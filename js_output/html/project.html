@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ИВТ-11 ОБ-09.03.01.01-11</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+</head>
+<body>
+    
+    <h1>ИВТ-11 ОБ-09.03.01.01-11</h1>
+    
+    <div class='tabs'>
+        <button class="tab active" data-content-class="essay-content">Эссе</button>
+        <button class="tab" data-content-class="target-content">Мишени</button>
+        <button class="tab" data-content-class="calculator-content">Калькулятор</button>
+        <button class="tab" data-content-class="graph2D-content">График Canvas</button>
+        <button class="tab" data-content-class="matrix-content">Матрицы</button>
+        <button class="tab" data-content-class="graph3D-content">3D графики</button>
+    </div>
+
+    <div class="contents">
+        <div id="essay-content" class="content">
+            <h1>
+                <pre class="a123">
+                                        Эссе
+                </pre>
+            </h1>
+
+            <h2>
+                <pre class="b123"> Здравствуйте, дорогие читатели, на данной страничке я бы хотел 
+            рассказать тебе немножко о себе.
+                </pre>
+            </h2>
+            
+            <h1>
+                <pre class="b123"> Цели: </pre>
+            </h1>
+            
+            <h3>
+                <pre class="b123">
+- Рассказать о себе
+- Чего хочу добиться в жизни, жизненные Цели
+- Почему именно УдГУ                                                           
+                </pre>
+                <pre class="c123">
+1.  Расскажу немного о себе.
+    Меня зовут Лобастов Павел. Я целеустремленный, настойчивый, трудолюбивый и довольно смышленный парень.
+    Мне 17 лет, и я учусь в Удмуртском Государственном Университете. Увлекаюсь спортом, а точнее волейболом и баскетболом.
+    Я люблю смотреть аниме и играть в компьютерную игру под названием <a class="s123" href="https://www.dota2.com/home?l=russian">Dota2</a>. В настоящий момент я активно изучаю языки
+    программировния, такие как: <a class="s123" href="https://ru.wikipedia.org/wiki/JavaScript">Java Script</a>, <a class="s123" href="https://ru.wikipedia.org/wiki/HTML">HTML</a>, <a class="s123" href="https://ru.wikipedia.org/wiki/CSS">CSS</a>, <a class="s123" href="https://ru.wikipedia.org/wiki/C#">C#</a>, так же хочу начать изучать <a class="s123" href="https://ru.wikipedia.org/wiki/C++">C++</a>. Изучаю я их не потому,
+    что надо, а потому что мне интересно, и я не хочу потерять 4 года впустую, закончив университет буквально ни с чем.
+    Параллельно изучению языков программировния я изучаю <a class="s123" href="https://ru.wikipedia.org/wiki/Blender">Blender</a> и некоторые игровые движки.
+                </pre>
+                <pre class="c123">
+2.  "Что ты выберешь?" - я выбираю счастье. 
+    У каждого человека разные планы на эту жизнь. Кто-то желает зарабатывать много денег, кто-то просто хочет прожить
+    стандартную жизнь. Я собираюсь заниматься тем, что мне действительно нравится, чтобы прожить наполненную красками жизнь,
+    и ни о чем не сожалеть под конец. Цели? Целей у меня много, я хочу работать в сфере программирования, хочу быть
+    многогранным специалистом, владеть скилами Frontend и Backend разработки, также при возможности зарабатывать на создании 
+    моделей для разных проектов. Помимо работы я хочу побывать в разных странах, в особенности в Японии, для меня это страна 
+    с невероятной культурой. 
+                </pre>
+                <pre class="c123">
+3.  "Почему именно <a class="s123" href="https://udsu.ru/">Удмурсткий Государственный Университет</a>?"
+    Я выбрал УдГУ, потому что это очень хороший университет. От друзей на год старше я узнал, что преподаватели очень 
+    сильные. Отучившись в УдГУ всего лишь месяц, я понял, что это именно тот вуз, в который действительно стоило поступить. 
+    В университете я нашел множество товарищей, они все являются очень интересными личностями, за это я тоже благодарен 
+    университету.
+                </pre>
+            </h3>
+            <pre class="c123">
+                Спасибо за Внимание!                               
+            </pre>
+        </div>
+
+        <div id="target-content" class="content hide">
+            <canvas id="targetVisual" width="700" height="700"></canvas>
+            <h1>Это та самая игруля-пуля, веселитесь!</h1>
+            <div class="gun">🎯</div>
+
+            <label for="isManual">
+                <h2>Сам стреляешь? Если да, то поставь галочку!</h2>
+                <input id="isManual" type="checkbox" class="check">
+            </label>
+            
+            <div class="manual hide">
+                <div>
+                    <input id="x" placeholder="x: only number" class="input">
+                </div>
+                <div>
+                    <input id="y" placeholder="y: only number" class="input">
+                </div>
+            </div>
+
+            <div class="random">
+                <input id="count" placeholder="count of shots" class="input">
+            </div>
+            <button id="shotMe" class="shot"><h3>Выстрел!!!</h3></button>
+            
+            <div>
+                <span id="score">Результат: 0</span>
+                <span id="procentHit">Процент попадания: 0%</span>
+            </div>
+
+            <button id="clearScore" class="clear"><h3>Очистить мои результаты</h3></button>
+        </div>
+
+        <div id="calculator-content" class="content hide">
+            <h1>Супер крутой, ультра инновационный калькулятор!</h1>
+            <div class="calculator">
+                <input type="text" id="calc-input" value="0">
+                <div class="calc-buttons">
+                    <button class="calc-number" data-number="7">7</button>
+                    <button class="calc-number" data-number="8">8</button>
+                    <button class="calc-number" data-number="9">9</button>
+                    <button class="calc-action" data-action="div">/</button>
+                    
+                    <button class="calc-number" data-number="4">4</button>
+                    <button class="calc-number" data-number="5">5</button>
+                    <button class="calc-number" data-number="6">6</button>
+                    <button class="calc-action" data-action="mult">*</button>
+                    
+                    <button class="calc-number" data-number="1">1</button>
+                    <button class="calc-number" data-number="2">2</button>
+                    <button class="calc-number" data-number="3">3</button>
+                    <button class="calc-action" data-action="sub">-</button>
+                    
+                    <button class="calc-number" data-number="0">0</button>
+                    <button class="calc-number" data-number=".">.</button>
+                    <button class="calc-action" data-action="calculate">=</button>
+                    <button class="calc-action" data-action="add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="graph2D-content" class="content hide">
+            <canvas id="graph2D" width="1100" height="1000"></canvas>
+            <h1>Графики функций</h1>
+            <div>
+                <input id="Fx" placeholder="Fx" class="input">
+            </div>
+            <div>
+                <input id="Xt" placeholder="Xt" class="input">
+            </div>
+            <div>
+                <input id="Yt" placeholder="Yt" class="input">
+            </div>
+            <div>
+                <input id="min-range" placeholder="min range" class="input">
+            </div>
+            <div>
+                <input id="max-range" placeholder="max range" class="input">
+            </div>
+            <div>
+                <input id="color" placeholder="color" class="input">
+            </div>
+            <div>
+                <input id="width" placeholder="width" class="input">
+            </div>
+        </div>
+
+        <div id="matrix-content" class="content hide">
+            <h1>Генератор матриц</h1>
+            <p>Выберите размер матрицы:</p>
+            <input type="number" id="lengthMatrix" min="1" max="10" value="3">
+            
+            <div class="matrix-buttons">
+                <button class="getMatrix" data-function-name="getZeroMatrix">Нулевая матрица</button>
+                <button class="getMatrix" data-function-name="getOneMatrix">Единичная матрица</button>
+                <button class="getMatrix" data-function-name="getReverseOneMatrix">Обратная единичная</button>
+                <button class="getMatrix" data-function-name="getTringelMatrix">Треугольная матрица</button>
+                <button class="getMatrix" data-function-name="getSpiralMatrix">Спиральная матрица</button>
+                <button class="getMatrix" data-function-name="getReverseSpiralMatrix">Обратная спиральная</button>
+                <button class="getMatrix" data-function-name="getRandomMatrix">Случайная матрица</button>
+            </div>
+
+            <div>
+                <span id="choice">Ваш выбор: </span>
+            </div>
+            
+            <div id="matrixOutput"></div>
+        </div>
+
+        <div id="graph3D-content" class="content hide">
+            <canvas id="graph3D" width="1100" height="1000"></canvas>
+            <div>
+                <label for="selectFigure"><h2>Выбери фигуру:</h2></label>
+                <select id="selectFigure" class="input" style="height: 100;">
+                    <option value="cube">Куб</option>
+                    <option value="sphere">Сфера</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/modules/Math3D/entities/point.js"></script>
+    <script src="../js/modules/Math3D/entities/figure.js"></script>
+    <script src="../js/modules/Math3D/entities/polygon.js"></script>
+    <script src="../js/modules/Math3D/entities/edge.js"></script>
+    <script src="../js/modules/Math3D/math3D.js"></script>
+    <script src="../js/modules/Math3D/figures/Cube.js"></script>
+    <script src="../js/modules/Math3D/figures/Sphere.js"></script>
+    <script src="../js/modules/calculatorMath.js"></script>
+    <script src="../js/pages/calculatorPage.js"></script>
+    <script src="../js/modules/canvas/canvas.js"></script>
+    <script src="../js/pages/graf2D.js"></script>
+    <script src="../js/modules/matrixMath.js"></script>
+    <script src="../js/pages/matrixPage.js"></script>
+    <script src="../js/modules/shotMath.js"></script>
+    <script src="../js/pages/shotPage.js"></script>
+    <script src="../js/tabs/tabs.js"></script>
+    <script src="../js/pages/graf3D.js"></script>
+    <script src="../js/project/project.js"></script>
+</body>
+</html>
