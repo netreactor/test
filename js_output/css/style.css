@@ -1,0 +1,368 @@
+body{
+    background-color: #ffffff;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #0f172a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.tabs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab{
+    margin: 5px;
+    padding: 15px 20px;
+    border: 2px solid #2563eb;
+    border-radius: 15px;
+    background: #3b82f6;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.tab:hover{
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.tab.active{
+    background-color: #1e40af;
+    color: #ffffff;
+    border-color: #1e3a8a;
+}
+
+.content{
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #bfdbfe;
+    min-height: 500px;
+    overflow: auto;
+}
+
+.hide{
+    display: none;
+}
+
+.a123{
+    font-weight: 800;
+    font-size: 30px;
+    text-shadow: rgba(0, 0, 0, 0.849) 2px 2px;
+    margin: 0;
+}
+
+.b123{
+    font-weight: 800;
+    font-size: 25px;
+    text-shadow: rgba(0, 0, 0, 0.849) 2px 2px;
+    margin: 20px 0;
+}
+
+.c123{
+    font-weight: 800;
+    font-size: 20px;
+    text-shadow: rgba(0, 0, 0, 0.849) 1px 2px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.s123{
+    color: #1d4ed8;
+    font-weight: 800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.s123:hover{
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+.p123{
+    margin-right: 200px;
+    margin-top: -15px;
+    border: 8px solid #60a5fa;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
+}
+
+.g123{
+    margin-right: 800px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#targetVisual{
+    float: right;
+    margin-right: 200px;
+    border: 3px solid #60a5fa;
+    border-radius: 10px;
+    background: white;
+}
+
+.gun{
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.check{
+    transform: scale(1.5);
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+
+.manual, .random{
+    margin: 15px 0;
+}
+
+.input{
+    padding: 10px;
+    width: 400px;
+    height: 35px;
+    margin: 5px;
+    border: 2px solid #60a5fa;
+    border-radius: 5px;
+    background: #eff6ff;
+    color: #0f172a;
+    font-size: 26px;
+}
+
+.input::placeholder{
+    color: #64748b;
+}
+
+#count{
+    padding: 10px;
+    border: 2px solid #60a5fa;
+    border-radius: 5px;
+    background: #eff6ff;
+    color: #0f172a;
+    font-size: 26px;
+    width: 200px;
+    height: 35px;
+}
+
+.shot, .clear{
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid #1d4ed8;
+    border-radius: 10px;
+    background: #3b82f6;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shot:hover, .clear:hover{
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+#score, #procentHit{
+    font-size: 24px;
+    margin: 15px 0;
+    display: block;
+}
+
+.calculator{
+    max-width: 500px;
+    height: 600px;
+    margin: 20px auto;
+    background: #f8fafc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #bfdbfe;
+}
+
+#calc-input{
+    width: 100%;
+    text-align: right;
+    font-size: 4em;
+    border-radius: 10px;
+    border: 2px solid #60a5fa;
+    margin-bottom: 35px;
+    background-color: #eff6ff;
+    height: 150px;
+    color: #0f172a;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.calc-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calc-number, .calc-action{
+    height: 95px;
+    padding: 20px;
+    border: 2px solid #1d4ed8;
+    border-radius: 10px;
+    background: #3b82f6;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calc-number:hover{
+    background: #1d4ed8;
+}
+
+.calc-action{
+    background: #2563eb;
+}
+
+.calc-action:hover{
+    background: #1e40af;
+}
+
+.calc-action[data-action="calculate"]{
+    background: #1e3a8a;
+    color: white;
+}
+
+.calc-action[data-action="calculate"]:hover{
+    background: #172554;
+}
+
+#graph2D{
+    display: block;
+    margin-right: 400px;
+    margin-top: 10px;
+    border: 3px solid #60a5fa;
+    border-radius: 10px;
+    background: white;
+    float: right;
+}
+
+.matrix-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.getMatrix{
+    padding: 15px;
+    border: 2px solid #1d4ed8;
+    border-radius: 10px;
+    background: #3b82f6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.getMatrix:hover{
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#lengthMatrix{
+    padding: 10px;
+    border: 2px solid #60a5fa;
+    border-radius: 5px;
+    background: #eff6ff;
+    color: #0f172a;
+    font-size: 16px;
+    width: 100px;
+    margin: 10px 0;
+}
+
+#matrixOutput{
+    background: #eff6ff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #60a5fa;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #0f172a;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .tabs{
+        flex-direction: column;
+    }
+    
+    .tab{
+        width: 100%;
+        text-align: center;
+    }
+    
+    #targetVisual{
+        float: none;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+    
+    .gun{
+        display: none;
+    }
+    
+    .matrix-buttons{
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator{
+        max-width: 100%;
+    }
+    
+    .calc-buttons{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .calc-number, .calc-action{
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+}
+
+
+h1, h2, h3 {
+    color: #0f172a;
+    text-shadow: none;
+}
+
+#graph3D{
+    display: block;
+    margin-right: 400px;
+    margin-top: 10px;
+    border: 3px solid #60a5fa;
+    border-radius: 10px;
+    background: white;
+    float: right;
+}
+
+#selectFigure {
+    width: 500px;
+    height: 50px;
+    font-size: 24px;
+    padding: 10px;
+}
